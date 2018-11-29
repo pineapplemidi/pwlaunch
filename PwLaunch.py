@@ -22,7 +22,8 @@ class PwLaunch(ControlSurface):
         with self.component_guard():
             is_momentary = True
             config = self._open_config()
-            self._session = self._setup_session(config['width'], config['height'])
+            self._session = self._setup_session(
+                config['width'], config['height'])
             self._button_down = ButtonElement(is_momentary, 0, 0, 12)
             self._session.set_scene_bank_down_button(self._button_down)
             self._button_up = ButtonElement(is_momentary, 0, 0, 11)
