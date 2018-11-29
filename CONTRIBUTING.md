@@ -9,9 +9,10 @@ contributing. Please use 79 characters per line.
 + Fork repo
 + Once in wip, move issue to the _wip_ column
 + When finished commit with the following [instructions](https://github.com/pineapplemidi/pwlaunch/blob/master/CONTRIBUTING.md#commit-instructions)
-+ Create a pull request with the master branch to be reviewed and either
++ Create a pull request with the dev branch to be reviewed and either
 accepted or rejected
-+ Code will be merged by pineapplemidi
++ Once accepted, merge code into the dev branch on the pineapplemidi PwLaunch
+repo
 + Once merged, please move issue to the _done_ column and close
 
 ### Commit instructions
