@@ -43,7 +43,7 @@ class PwLaunch(ControlSurface):
     def log(self, message):
         log_str = 'LOG: ' + message + '\n'
         with io.open(
-            "/users/berry/somefile.txt",
+            "/users/berry/pwlaunch.txt",
                 mode='w', encoding='utf-8') as f:
             f.write(log_str)
             f.close()
