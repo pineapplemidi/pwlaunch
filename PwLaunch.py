@@ -17,7 +17,6 @@ GREEN_FULL = 52
 GREEN_BLINK = 100
 
 class PwLaunch(ControlSurface):
-
     def __init__(self, c_instance):
         super(PwLaunch, self).__init__(c_instance)
         with self.component_guard():
@@ -34,6 +33,10 @@ class PwLaunch(ControlSurface):
             clip_slot.set_triggered_to_play_value(GREEN_BLINK)
             clip_slot.set_started_value(GREEN_FULL)
             clip_slot.set_launch_button(self._launch_button)
+            self._stop_button = ButtonElement(is_momentary, 0, 0, 82)
+            clip_stop_buttons = []
+            clip_stop_buttons.append(self._stop_button)
+            self._session.set_stop_track_clip_buttons(tuple(clip_stop_buttons))
             self.set_highlighting_session_component(self._session)
 
     def _open_config(self):
