@@ -12,6 +12,9 @@ from _Framework.ControlSurface import ControlSurface
 from _Framework.SessionComponent import SessionComponent
 from _Framework.ButtonElement import ButtonElement
 
+RED_THIRD = 4
+GREEN_FULL = 52
+GREEN_BLINK = 100
 
 class PwLaunch(ControlSurface):
 
@@ -26,7 +29,11 @@ class PwLaunch(ControlSurface):
             self._button_up = ButtonElement(is_momentary, 0, 0, 11)
             self._session.set_scene_bank_up_button(self._button_up)
             self._launch_button = ButtonElement(is_momentary, 0, 0, 81)
-            self._session.scene(0).clip_slot(0).set_launch_button(self._launch_button)
+            clip_slot = self._session.scene(0).clip_slot(0)
+            clip_slot.set_stopped_value(RED_THIRD)
+            clip_slot.set_triggered_to_play_value(GREEN_BLINK)
+            clip_slot.set_started_value(GREEN_FULL)
+            clip_slot.set_launch_button(self._launch_button)
             self.set_highlighting_session_component(self._session)
 
     def _open_config(self):
