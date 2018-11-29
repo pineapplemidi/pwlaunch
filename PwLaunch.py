@@ -12,9 +12,7 @@ from _Framework.ControlSurface import ControlSurface
 from _Framework.SessionComponent import SessionComponent
 from _Framework.ButtonElement import ButtonElement
 
-RED_THIRD = 4
-GREEN_FULL = 52
-GREEN_BLINK = 100
+from .Colors import Colors
 
 class PwLaunch(ControlSurface):
     def __init__(self, c_instance):
@@ -30,9 +28,9 @@ class PwLaunch(ControlSurface):
             self._session.set_scene_bank_up_button(self._button_up)
             self._launch_button = ButtonElement(is_momentary, 0, 0, 81)
             clip_slot = self._session.scene(0).clip_slot(0)
-            clip_slot.set_stopped_value(RED_THIRD)
-            clip_slot.set_triggered_to_play_value(GREEN_BLINK)
-            clip_slot.set_started_value(GREEN_FULL)
+            clip_slot.set_stopped_value(Colors.RED_THIRD)
+            clip_slot.set_triggered_to_play_value(Colors.YELLOW_HALF)
+            clip_slot.set_started_value(Colors.DARK_BLUE_HALF)
             clip_slot.set_launch_button(self._launch_button)
             self._stop_button = ButtonElement(is_momentary, 0, 0, 82)
             clip_stop_buttons = []
