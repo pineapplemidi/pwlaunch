@@ -31,6 +31,12 @@ To see the logs, open a terminal window an return
 $ tail -f pwlaunch.txt
 ```
 
+## Documentation
+
+### v0.0.0
+
+![v0.0.0](./docs/imgs/PwLaunch-0.0.0.png)
+
 ## Resources
 
 + [Unofficial API docs](https://julienbayle.studio/PythonLiveAPI_documentation/Live10.0.2.xml)
