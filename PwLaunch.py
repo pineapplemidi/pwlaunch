@@ -25,6 +25,8 @@ class PwLaunch(ControlSurface):
             self._session.set_scene_bank_down_button(self._button_down)
             self._button_up = ButtonElement(is_momentary, 0, 0, 11)
             self._session.set_scene_bank_up_button(self._button_up)
+            self._launch_button = ButtonElement(is_momentary, 0, 0, 81)
+            self._session.scene(0).clip_slot(0).set_launch_button(self._launch_button)
             self.set_highlighting_session_component(self._session)
 
     def _open_config(self):
